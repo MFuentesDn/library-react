@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "nombre": "Don Quijote de la Mancha",
+        "isbn": "0-7645-2641-3",
+        "autor": "Miguel de Cervantes",
+        "anioPublicacion":1994,
+        "image": "https://simehbucket.s3.amazonaws.com/images/5a2d2f9c29b2605bc4176f80682b2c91-full.jpg",
+        "sinopsis": "Una de las novelas más importantes de todos los tiempos y para muchos la obra definitiva de la literatura española. Escrita por Miguel de Cervantes (1547-1616) y publicada entre 1605 y 1615, narra las aventuras del ingenioso hidalgo Don Quijote de la Mancha (llamado realmente Alonso Quijano), en su misión personal de enmendar entuertos en donde los hubiere, acompañado de su fiel escudero, y amigo Sancho Panza. Nacida del amor de su autor por la novela caballeresca, Don Quijote se convirtió en una oda a ese particular estilo y en una crítica mordaz y humorística de la sociedad y el mundo de la época."
+    },
+    {
+        "id":2,
+        "nombre":"El retrato de Dorian Gray",
+        "isbn": "0-8746-2641-2",
+        "autor": "Oscar Wilde",
+        "anioPublicacion":1854,
+        "image": "https://ellectorespectador.files.wordpress.com/2013/05/el-retrato-de-dorian-gray.jpg",
+        "sinopsis": "Grandes Clásicos Literatura Random House recupera en esta preciosa edición El retrato de Dorian Gray, la maravillosa obra maestra de Oscar Wilde.En su única novela, el divino Oscar Wilde puso al día el mito de Fausto. En este caso, la víctima es Dorian Gray, un bello y presuntuoso joven a quien un amigo hace un retrato al óleo. Cuando Dorian trabe amistad con lord Henry Wotton, un cínico filósofo, este le convencerá de que sus más valiosas posesiones son su belleza y su juventud. Y, a partir de ahí, su deseo de que su retrato envejezca mientras él permanece joven se hace realidad. Pero ¿a qué precio?Estamos, simple y llanamente, ante uno de los libros más bellos e ingeniosos de todos los tiempos.Luis Antonio de Villena dijo... «Un libro lleno de fascinación y encanto, fácil y difícil a la vez, y cuyo único protagonista y tema esencial es la belleza. Una de las pasiones que hacen vivir y dan sentido y fuerza al mundo.»"
+    },
+    {
+        "id":3,
+        "nombre":"Ana Karenina",
+        "isbn": "0-7665-5244-4",
+        "autor": "León Tolstói",
+        "anioPublicacion":2002,
+        "image": "https://www.elejandria.com/covers/Ana_Karenina-Tolstoi_Leon-lg.png",
+        "sinopsis": "Anna Karenina (Keira Knightley), la esposa de un ministro (Jude Law) imperial ruso, provoca un escándalo en la alta sociedad por su romance con el Conde Vronsky, un apuesto oficial de caballería en San Petersburgo en el siglo XIX. Alexei, el esposo de Anna, ofrece una difícil opción: exiliarse con Vronsky pero nunca volver a ver a su hijo, o seguir con la familia y seguir las reglas de discreción. Un granjero llamado Levin se enamora de la Princesa Kitty, quien sólo tiene ojos para Vronsky."
+    },
+    {
+        "id":4,
+        "nombre":"El Principito",
+        "isbn": "0-6452-6615-5",
+        "autor": "Antoine de Saint-Exupéry",
+        "anioPublicacion":1943,
+        "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/f4/bc/f4bc25288107cfebe6a9cbc1e245c00a.jpg",
+        "sinopsis": "El principito es una narración corta del escritor francés Antoine de Saint-Exupéry. La historia se centra en un pequeño príncipe que realiza una travesía por el universo. En este viaje descubre la extraña forma en que los adultos ven la vida y comprende el valor del amor y la amistad.El principito es considerado como uno de los mejores libros de todos los tiempos y como un clásico contemporáneo de la literatura universal. Debido a su estilo sencillo y directo, se lo ha considerado un libro para niños. No obstante, su carácter reflexivo sobre la vida, la sociedad y el amor, lo convierten en una narración de interés para todos. Fue publicado en abril de 1943 en Estados Unidos, puesto que, debido a la segunda guerra mundial, la obra no pudo ser impresa en Francia. El libro ha sido traducido a decenas de lenguas y adaptado a diversos formatos, como el teatro, cine, serie animada, ballet y ópera."
+    },
+    {
+        "id":5,
+        "nombre":"El proceso",
+        "isbn": "0-2365-1985-3",
+        "autor": "Franz Kafka",
+        "anioPublicacion":2002,
+        "image": "https://www.elresumen.com/tapas_libros/el_proceso.jpg",
+        "sinopsis": "Al filo de la muerte, Franz Kafka pidió a su amigo Max Brod que destruyese todo el material que no había publicado en vida para que nunca viese la luz. Esta novela inacabada hubiese corrido esa suerte de no ser por Brod, quien advirtió el gran valor literario de dicha obra y desobedeció la petición de su amigo. Publicada póstumamente en 1925, Kafka escribió El proceso en la treintena y es una de las piezas clave de la producción de este autor checo.        La novela empieza con el arresto de Joseph K. una mañana en su casa, acusado por alguien de un crimen del que tampoco sabe nada. Desde ese momento, K. se adentra en una auténtica pesadilla. Ante unos jueces enigmáticos que aparentemente ignoran los detalles del caso, acaba repasando su vida en busca de algún hecho que haya podido merecer la denuncia y su detención. La inaccesibilidad de las altas instancias de la justicia y del Estado lo atrapa en un laberinto desmoralizante."
+    },
+    {
+        "id":6,
+        "nombre":"El ruido y la furia",
+        "isbn": "0-3365-1994-9",
+        "autor": "William Faulkner",
+        "anioPublicacion":2002,
+        "image": "https://simehbucket.s3.amazonaws.com/images/5a2d2f9c29b2605bc4176f80682b2c91-full.jpg",
+        "sinopsis": "Una de las novelas más importantes de todos los tiempos y para muchos la obra definitiva de la literatura española. Escrita por Miguel de Cervantes (1547-1616) y publicada entre 1605 y 1615, narra las aventuras del ingenioso hidalgo Don Quijote de la Mancha (llamado realmente Alonso Quijano), en su misión personal de enmendar entuertos en donde los hubiere, acompañado de su fiel escudero, y amigo Sancho Panza. Nacida del amor de su autor por la novela caballeresca, Don Quijote se convirtió en una oda a ese particular estilo y en una crítica mordaz y humorística de la sociedad y el mundo de la época."
+    },
+    {
+        "id":7,
+        "nombre":"Hamlet",
+        "isbn": "0-3335-1875-3",
+        "autor": "William Shakespeare",
+        "anioPublicacion":2002,
+        "image": "https://simehbucket.s3.amazonaws.com/images/5a2d2f9c29b2605bc4176f80682b2c91-full.jpg",
+        "sinopsis": "Una de las novelas más importantes de todos los tiempos y para muchos la obra definitiva de la literatura española. Escrita por Miguel de Cervantes (1547-1616) y publicada entre 1605 y 1615, narra las aventuras del ingenioso hidalgo Don Quijote de la Mancha (llamado realmente Alonso Quijano), en su misión personal de enmendar entuertos en donde los hubiere, acompañado de su fiel escudero, y amigo Sancho Panza. Nacida del amor de su autor por la novela caballeresca, Don Quijote se convirtió en una oda a ese particular estilo y en una crítica mordaz y humorística de la sociedad y el mundo de la época."
+    },
+    {
+        "id":8,
+        "nombre":"Lo que el viento se llevó",
+        "isbn": "0-9846-1265-3",
+        "autor": "Margaret Mitchell",
+        "anioPublicacion":2002,
+        "image": "https://simehbucket.s3.amazonaws.com/images/5a2d2f9c29b2605bc4176f80682b2c91-full.jpg",
+        "sinopsis": "Una de las novelas más importantes de todos los tiempos y para muchos la obra definitiva de la literatura española. Escrita por Miguel de Cervantes (1547-1616) y publicada entre 1605 y 1615, narra las aventuras del ingenioso hidalgo Don Quijote de la Mancha (llamado realmente Alonso Quijano), en su misión personal de enmendar entuertos en donde los hubiere, acompañado de su fiel escudero, y amigo Sancho Panza. Nacida del amor de su autor por la novela caballeresca, Don Quijote se convirtió en una oda a ese particular estilo y en una crítica mordaz y humorística de la sociedad y el mundo de la época."
+    },
+    {
+        "id":9,
+        "nombre":"La Odisea",
+        "isbn": "Anónimo",
+        "autor": "Homero",
+        "anioPublicacion":2002,
+        "image": "https://simehbucket.s3.amazonaws.com/images/5a2d2f9c29b2605bc4176f80682b2c91-full.jpg",
+        "sinopsis": "Una de las novelas más importantes de todos los tiempos y para muchos la obra definitiva de la literatura española. Escrita por Miguel de Cervantes (1547-1616) y publicada entre 1605 y 1615, narra las aventuras del ingenioso hidalgo Don Quijote de la Mancha (llamado realmente Alonso Quijano), en su misión personal de enmendar entuertos en donde los hubiere, acompañado de su fiel escudero, y amigo Sancho Panza. Nacida del amor de su autor por la novela caballeresca, Don Quijote se convirtió en una oda a ese particular estilo y en una crítica mordaz y humorística de la sociedad y el mundo de la época."
+    },
+    {
+        "id":10,
+        "nombre":"Las uvas de la ira",
+        "isbn": "0-1256-56484-3",
+        "autor": "John Steinbeck",
+        "anioPublicacion":2002,
+        "image": "https://simehbucket.s3.amazonaws.com/images/5a2d2f9c29b2605bc4176f80682b2c91-full.jpg",
+        "sinopsis": "Una de las novelas más importantes de todos los tiempos y para muchos la obra definitiva de la literatura española. Escrita por Miguel de Cervantes (1547-1616) y publicada entre 1605 y 1615, narra las aventuras del ingenioso hidalgo Don Quijote de la Mancha (llamado realmente Alonso Quijano), en su misión personal de enmendar entuertos en donde los hubiere, acompañado de su fiel escudero, y amigo Sancho Panza. Nacida del amor de su autor por la novela caballeresca, Don Quijote se convirtió en una oda a ese particular estilo y en una crítica mordaz y humorística de la sociedad y el mundo de la época."
+    }
+]

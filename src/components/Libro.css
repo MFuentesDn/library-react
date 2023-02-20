@@ -1,0 +1,21 @@
+
+
+.titulo_boton {
+    display:flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.img-thumbnail {
+    float: left;
+    width: 150px;
+}
+
+.card {
+    margin-bottom: 15px;;
+}

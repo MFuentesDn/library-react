@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "nombre":"Anyi",
+        "apellido": "Bustos",
+        "edad": 18
+    },
+    {
+        "id":2,
+        "nombre":"Camila",
+        "apellido": "Torres",
+        "edad": 24
+    },
+    {
+        "id":3,
+		"nombre": "Fitzgerald",
+		"apellido":"Cummings",
+        "edad": 32
+	},
+	{
+        "id":4,
+		"nombre": "Devin",
+		"apellido":"Garcia",
+        "edad": 45
+	},
+	{
+        "id":5,
+		"nombre": "Colleen",
+		"apellido":"Thomas",
+        "edad": 25
+	},
+	{
+        "id":6,
+		"nombre": "Dexter",
+		"apellido":"Kemp",
+        "edad": 17
+	},
+	{
+        "id":7,
+		"nombre": "Zachery",
+		"apellido":"Hernandez",
+        "edad": 33
+	}
+]

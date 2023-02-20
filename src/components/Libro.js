@@ -2,7 +2,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import './Libro.css';
 import { useEffect, useState } from "react";
 import { HooksPersonalizados } from './HooksCustom';
-
+import { getBooks } from '../services/libroService'
 
 export const Libro = () => {
   const [dataInitial, setDataInitial] = useState();
@@ -11,8 +11,10 @@ export const Libro = () => {
   const [dataToEdit, setDataToEdit] = useState(null); //funcion que permite saber actualizacion o creacion
   const [showComponent, setShowComponent] = useState(1);
 
+
   useEffect(() => {
-    setLibros(dataInitial)
+    //setLibros(dataInitial)
+    setLibros(getBooks())
   }, [dataInitial])
 
   useEffect(() => {

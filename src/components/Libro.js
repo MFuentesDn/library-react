@@ -11,11 +11,24 @@ export const Libro = () => {
   const [dataToEdit, setDataToEdit] = useState(null); //funcion que permite saber actualizacion o creacion
   const [showComponent, setShowComponent] = useState(1);
 
-
-  useEffect(() => {
+  /*useEffect(() => {
     //setLibros(dataInitial)
     setLibros(getBooks())
-  }, [dataInitial])
+  })*/
+
+  useEffect(() => {
+    (async () => {
+       const data = await getBooks();
+       console.log('dcsdcsdcsdcsdc', data)
+       setLibros(data);
+    })();
+  }, [dataInitial]);
+
+ /* useEffect(() => {
+    //setLibros(dataInitial)
+    console.log('---',getBooks())
+    setLibros(getBooks())
+  }, [dataInitial])*/
 
   useEffect(() => {
     if (dataToEdit) {
@@ -79,9 +92,9 @@ export const ListarLibros = ({ libros, deleteData, setDataToEdit, setShowCompone
           <tbody>
             {libros && libros.map((libro, index) => (
               <tr key={index}>
-                <td>{libro.nombre}</td>
+                <td>{libro.name}</td>
                 <td>{libro.isbn}</td>
-                <td>{libro.autor} </td>
+                <td>{libro.author} </td>
                 <td>
                   <button type="button" onClick={() => openModal(libro)} className='btn btn-outline-info btn-sm'
                     data-bs-toggle='modal' data-bs-target='#modalLibros'>
@@ -116,9 +129,9 @@ export const ListarLibros = ({ libros, deleteData, setDataToEdit, setShowCompone
                       <img src={libro ? libro.image : ''} alt="..." class="img-thumbnail"></img>
                     </div>
                     <div>
-                      <p><b>Autor:</b>{libro ? libro.autor:''}</p>
-                      <p><b>Año publicación:</b>{libro ? libro.anioPublicacion:0}</p>
-                      <p><b>Sinopsis:</b>{libro ? libro.sinopsis:''}</p>
+                      <p><b>Autor:</b>{libro ? libro.author:''}</p>
+                      <p><b>Año publicación:</b>{libro ? libro.publicationYear:0}</p>
+                      <p><b>Sinopsis:</b>{libro ? libro.synopsis:''}</p>
                     </div>
                   </div>
                   <button type="button" onClick={() => setDataToEdit(libro)} data-bs-toggle='modal' data-bs-target='#modalLibros' className='btn btn-info btn-sm'>
@@ -192,7 +205,7 @@ export const AgregarLibro = ({ createData, updateData, dataToEdit, setDataToEdit
       <form onSubmit={handleClick}>
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="nombre" value={form.nombre} onChange={handleChange} aria-describedby="emailHelp"></input>
+          <input type="text" class="form-control" name="nombre" value={form.name} onChange={handleChange} aria-describedby="emailHelp"></input>
         </div>
         <div class="mb-3">
           <label class="form-label">ISBN</label>
@@ -200,15 +213,15 @@ export const AgregarLibro = ({ createData, updateData, dataToEdit, setDataToEdit
         </div>
         <div class="mb-3">
           <label class="form-label">Autor</label>
-          <input type="text" class="form-control" name="autor" value={form.autor} onChange={handleChange}></input>
+          <input type="text" class="form-control" name="autor" value={form.author} onChange={handleChange}></input>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Año publicación</label>
-          <input type="number" class="form-control" name="anioPublicacion" value={form.anioPublicacion} onChange={handleChange}></input>
+          <input type="number" class="form-control" name="publicationYear" value={form.anioPublicacion} onChange={handleChange}></input>
         </div>
         <div class="mb-3">
           <label class="form-label">Sinopsis</label>
-          <input type="text" class="form-control" name="sinopsis" value={form.sinopsis} onChange={handleChange}></input>
+          <input type="text" class="form-control" name="sinopsis" value={form.synopsis} onChange={handleChange}></input>
         </div>
         <button type="submit" class="btn btn-primary m-2" onClick={handleClick}>{dataToEdit ? "Editar" : "Agregar"}</button>
         <button type="button" class="btn btn-outline-secondary m-2" onClick={() => setShowComponent(1)} >Cancelar</button>

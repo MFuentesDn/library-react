@@ -2,7 +2,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import './Libro.css';
 import { useEffect, useState } from "react";
 import { HooksPersonalizados } from './HooksCustom';
-import { getBooks } from '../services/libroService'
+import { getBooks, createBook, updateBook, deleteBook} from '../services/libroService'
 
 export const Libro = () => {
   const [dataInitial, setDataInitial] = useState();
@@ -15,13 +15,15 @@ export const Libro = () => {
     //setLibros(dataInitial)
     setLibros(getBooks())
   })*/
+  const fetchData = () => {
+    (async () => {
+      const data = await getBooks();
+      setLibros(data);
+   })();
+  }
 
   useEffect(() => {
-    (async () => {
-       const data = await getBooks();
-       console.log('dcsdcsdcsdcsdc', data)
-       setLibros(data);
-    })();
+    fetchData()
   }, [dataInitial]);
 
  /* useEffect(() => {
@@ -38,21 +40,34 @@ export const Libro = () => {
     }
   }, [dataToEdit])
 
-  const createData = (data) => {
-    data.id = libros.length + 1
-    setLibros([...libros, data])
-    setShowComponent(1)
+  const createData = (dataToSave) => {
+    //data.id = libros.length + 1
+    //setLibros([...libros, data])
+    //setShowComponent(1)
+    (async () => {
+      const data = await createBook(dataToSave);
+      fetchData()
+      setShowComponent(1)
+    })();
   };
 
-  const updateData = (data) => {
-    let nuevosLibros = libros.map(libro => libro.id === data.id ? data : libro);
-    setLibros(nuevosLibros);
+  const updateData = (dataToSave) => {
+    //let nuevosLibros = libros.map(libro => libro.id === data.id ? data : libro);
+    //setLibros(nuevosLibros);
+    (async () => {
+      const data = await updateBook(dataToSave);
+      fetchData()
+    })();
   };
 
   const deleteData = (id) => {
-    console.log('entre delete')
-    let nuevosLibros = libros.filter(libro => libro.id !== id)
-    setLibros(nuevosLibros)
+    //let nuevosLibros = libros.filter(libro => libro.id !== id)
+    //setLibros(nuevosLibros)
+    (async () => {
+      console.log('id delete', id)
+      const data = await deleteBook(id);
+      fetchData()
+    })();
   };
 
   return (
@@ -103,7 +118,7 @@ export const ListarLibros = ({ libros, deleteData, setDataToEdit, setShowCompone
                   <button type="button" onClick={() => setDataToEdit(libro)} className='btn btn-info btn-sm'>
                     <i className='fa-solid fa-edit'></i>
                   </button>
-                  <button type="button" onClick={() => deleteData(libro.id)} className='btn btn-danger btn-sm'>
+                  <button type="button" onClick={() => deleteData(libro.bookId)} className='btn btn-danger btn-sm'>
                     <i className='fa-solid fa-trash'></i>
                   </button>
                 </td>
@@ -137,7 +152,7 @@ export const ListarLibros = ({ libros, deleteData, setDataToEdit, setShowCompone
                   <button type="button" onClick={() => setDataToEdit(libro)} data-bs-toggle='modal' data-bs-target='#modalLibros' className='btn btn-info btn-sm'>
                     <i className='fa-solid fa-edit'></i>
                   </button>
-                  <button type="button" onClick={() => deleteData(libro.id)} className='btn btn-danger btn-sm'>
+                  <button type="button" onClick={() => deleteData(libro.bookId)} className='btn btn-danger btn-sm'>
                     <i className='fa-solid fa-trash'></i>
                   </button>
                 </div>
@@ -156,7 +171,7 @@ export const ListarLibros = ({ libros, deleteData, setDataToEdit, setShowCompone
 
 const initialForm = {
   id: null,
-  nombre: '',
+  name: '',
   isbn: '',
 };
 
@@ -175,7 +190,7 @@ export const AgregarLibro = ({ createData, updateData, dataToEdit, setDataToEdit
 
   const handleClick = (event) => {
     event.preventDefault();
-    if (!form.nombre || !form.isbn) {
+    if (!form.name || !form.isbn) {
       alert("Datos incompletos");
       return;
     }
@@ -205,7 +220,7 @@ export const AgregarLibro = ({ createData, updateData, dataToEdit, setDataToEdit
       <form onSubmit={handleClick}>
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" name="nombre" value={form.name} onChange={handleChange} aria-describedby="emailHelp"></input>
+          <input type="text" class="form-control" name="name" value={form.name} onChange={handleChange} aria-describedby="emailHelp"></input>
         </div>
         <div class="mb-3">
           <label class="form-label">ISBN</label>
@@ -213,15 +228,15 @@ export const AgregarLibro = ({ createData, updateData, dataToEdit, setDataToEdit
         </div>
         <div class="mb-3">
           <label class="form-label">Autor</label>
-          <input type="text" class="form-control" name="autor" value={form.author} onChange={handleChange}></input>
+          <input type="text" class="form-control" name="author" value={form.author} onChange={handleChange}></input>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Año publicación</label>
-          <input type="number" class="form-control" name="publicationYear" value={form.anioPublicacion} onChange={handleChange}></input>
+          <input type="number" class="form-control" name="publicationYear" value={form.publicationYear} onChange={handleChange}></input>
         </div>
         <div class="mb-3">
           <label class="form-label">Sinopsis</label>
-          <input type="text" class="form-control" name="sinopsis" value={form.synopsis} onChange={handleChange}></input>
+          <input type="text" class="form-control" name="synopsis" value={form.synopsis} onChange={handleChange}></input>
         </div>
         <button type="submit" class="btn btn-primary m-2" onClick={handleClick}>{dataToEdit ? "Editar" : "Agregar"}</button>
         <button type="button" class="btn btn-outline-secondary m-2" onClick={() => setShowComponent(1)} >Cancelar</button>
